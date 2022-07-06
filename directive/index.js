@@ -1,11 +1,13 @@
 import { colorObj } from './color'
 import { countdownObj } from './countdown'
 import { resize } from './resize'
+import { int } from './int'
 
 let directives = {
     color: colorObj,
     countdown: countdownObj,
-    resize
+    resize, 
+    int
 }
 
 export default function (Vue) {

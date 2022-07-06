@@ -1,7 +1,7 @@
 <template>
   <div style="height: 3000px">
-    <div v-color="'deepskyblue'">vue自定义指令</div>
-    <div v-countdown="10" />
+    <!-- <div v-color="'deepskyblue'">vue自定义指令</div>
+    <div v-countdown="10" /> -->
     <!-- <button @click="openNotice">打开</button>
     <h2>tree组件</h2>
     <rm-tree :treeData="treeData"></rm-tree>
@@ -56,7 +56,8 @@
     <h2>小写转换成大写</h2>
     <p>{{str}}</p>
     <p>{{str | upperCase}}</p> -->
-    <div class="box1" v-resize="DomResize"></div>
+    <!-- <div class="box1" v-resize="DomResize"></div> -->
+    <rm-input v-model="inputValue" v-int></rm-input>
   </div>
 </template>
 
@@ -64,6 +65,7 @@
 export default {
   data() {
     return {
+      inputValue: '',
       time: Date.now(),
       str: "I like doing sports. It's good for my health",
       activeNames: ["2"],
