@@ -1,7 +1,7 @@
 <template>
   <div style="height: 3000px">
-    <div v-color="'deepskyblue'">vue自定义指令</div>
-    <div v-countdown="10" />
+    <!-- <div v-color="'deepskyblue'">vue自定义指令</div>
+    <div v-countdown="10" /> -->
     <!-- <button @click="openNotice">打开</button>
     <h2>tree组件</h2>
     <rm-tree :treeData="treeData"></rm-tree>
@@ -56,7 +56,10 @@
     <h2>小写转换成大写</h2>
     <p>{{str}}</p>
     <p>{{str | upperCase}}</p> -->
-    <div class="box1" v-resize="DomResize"></div>
+    <!-- <div class="box1" v-resize="DomResize"></div> -->
+    <div style="width: 200px;">
+      <rm-menu  :data="menuData3" value="g" type="v" @click="_click"></rm-menu>
+    </div>
   </div>
 </template>
 
@@ -147,6 +150,50 @@ export default {
           },
         ],
       },
+
+      menuData3: [
+        {title: '首页', href: '/', key: 'a', target: '_blank', icon: 'icon-user'},
+        {
+          title: '关于我们',
+          key: 'b',
+          children: [
+            {title: '关于01', key: 'b1'}
+          ]
+        },
+        {
+          title: '产品中心',
+          key: 'active',
+          children: [
+            {
+              title: '产品1',
+              href: '/',
+              key: 'd'
+            },
+            {
+              title: '产品2',
+              key: 'e',
+              children: [
+                {
+                  title: '产品2-1', key: 'f'
+                },
+                {
+                  title: '产品2-2', key: 'g'
+                },
+                {
+                  title: '产品2-3', key: 'h'
+                }
+              ]
+            },
+            {
+              title: '产品3', key: 'i'
+            },
+            {
+              title: '产品4', key: 'j'
+            }
+          ]
+        },
+        {title: '联系我们', key: 'c'}
+      ]
     };
   },
   methods: {
@@ -159,6 +206,9 @@ export default {
     },
     DomResize(data) {
       console.log('变化', data)
+    },
+    _click (item) {
+      console.log(item)
     }
   }
 };
