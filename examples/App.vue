@@ -60,6 +60,7 @@
     <div style="width: 200px;">
       <rm-menu  :data="menuData3" value="g" type="v" @click="_click"></rm-menu>
     </div>
+    <rm-input v-model="inputValue" v-int></rm-input>
   </div>
 </template>
 
@@ -67,6 +68,7 @@
 export default {
   data() {
     return {
+      inputValue: '',
       time: Date.now(),
       str: "I like doing sports. It's good for my health",
       activeNames: ["2"],
