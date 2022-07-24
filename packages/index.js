@@ -14,6 +14,7 @@ import RmTree from './tree'
 import RmDrag from './drag'
 import RmToast from './toast'
 import RmMenu from './menu'
+import RxCollapse from './rxCollapse'
 import './fonts/font.scss'
 // 存储组件列表
 const components = [
@@ -31,7 +32,8 @@ const components = [
   RmCollapseItem,
   RmTree,
   RmDrag,
-  RmMenu
+  RmMenu,
+  RxCollapse
 ]
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 const install = function (Vue) {
@@ -66,5 +68,6 @@ export default {
   RmCollapseItem,
   RmTree,
   RmDrag,
-  RmMenu
+  RmMenu,
+  RxCollapse
 }

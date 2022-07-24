@@ -61,6 +61,12 @@
       <rm-menu  :data="menuData3" value="g" type="v" @click="_click"></rm-menu>
     </div>
     <rm-input v-model="inputValue" v-int></rm-input>
+
+    <rx-collapse title="标题1" headColor="#151515" width="500px" bgColor="#fff" :isCollapse="false" style="color:black;">
+      <div>这是内容1</div>
+    </rx-collapse>
+
+    <div>777777777777777777777777777</div>
   </div>
 </template>
 
